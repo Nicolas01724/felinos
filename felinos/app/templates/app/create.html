@@ -1,0 +1,31 @@
+<form action="{% url 'api' %}" method="post">
+  {% csrf_token %}
+  <fieldset>
+    <legend> <h1>Nome</h1> </legend>
+  
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    <input type="text" name="portuguese_name" id="portuguese_name" value="">
+    <label for="portuguese_name">Nome em portuês</label><br>
+
+    <input type="text" name="english_name" id="english_name" value="">
+    <label for="english_name">Nome em ingês</label><br>
+
+    <input type="text" name="scientific_name" id="scientific_name" value="">
+    <label for="scientific_name">Nome em científico</label><br>
+
+    <input type="text" name="portuguese_name" id="portuguese_name" value="">
+    <label for="portuguese_name">Nome em portuês</label><br>
+
+    <input type="text" name="mage_url" id="mage_url" value="">
+    <label for="mage_url">Url da imagem</label><br>
+
+    <input type="text" name="habitat" id="habitat" value="">
+    <label for="habitat">Habitat</label><br>
+
+    <input type="text" name="curiosities" id="curiosities" value="">
+    <label for="curiosities">Fatos intereçantes</label><br>
+  </fieldset>
+
+  <input type="submit" value="Vote">
+</form>

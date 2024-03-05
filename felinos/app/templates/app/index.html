@@ -1,0 +1,9 @@
+{% if felinos %}
+  <ul>
+  {% for felino in felinos %}
+    <li><a href="{% url 'detail' felino.id %}/">{{ felino.portuguese_name }}</a></li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>Nenhum felino encontrado 😔😔</p>
+{% endif %}
